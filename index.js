@@ -173,7 +173,7 @@ userName = document.getElementById("input-text").value;
 // console.log(hypotaneus);
 
 
-let b;
+let b; 
 let a;
 var hypo;
 document.getElementById("calculate").onclick = function () {
@@ -199,6 +199,54 @@ document.getElementById("find").onclick = function(){
 }
 
 
-// let's create a div when user press the add comment button
+ /*
+    creating random number using Math.random function
+
+ */ 
+let v = Math.floor(Math.random() *6) + 1;
+console.log("below function generate random number");
+console.log(v);
+
+/*
+    Some useful string function $ methods
+    1.length -> this will give the length o fa string
+    2.charAt() -> this function will give a character a  particular index
+    3.indexOf() -> this function will give a  index value of  a particular character in a string
+    4.lastIndexOf() -> this functiion will give the last index of a character in a string (eg. "bro code"  -> in this example first 'o' is at index number 2 and second is at index number 5)
+    5. trim() ->  trim the extra space
+    6.replaceAll() -> this function will replace a particular character with another character
+
+*/
+let Name = "Emad Ansari";
+console.log(Name.length);
+console.log(Name.charAt(6));
+console.log(Name.indexOf('A'));
+console.log(Name.lastIndexOf('a'));
+console.log(Name.toLowerCase());
+console.log(Name.toUpperCase());
+
+let phoneNumber = "123-456-789";
+console.log("before replacing the character : " , phoneNumber);
+console.log("after replacing the character : " );
+console.log(phoneNumber.replaceAll("-", "*"));
+
+/*
+    slice(inclusive_index , exculsive_index) method -> it extract a section of a string and 
+    //                returns it as a new string,
+    //                without modifying the orginal stirng
+
+*/
+let fullName = "Emad Ansari";
+let first_Name;
+let last_Name;
+// first_Name = fullName.slice(0, 5);
+// last_Name = fullName.slice(5);
+
+first_Name = fullName.slice(0, fullName.indexOf(" "));
+last_Name = fullName.slice(fullName.indexOf(" ") + 1);
+
+console.log(first_Name);
+console.log(last_Name);
+
 
 
