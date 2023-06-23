@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+
+.outer{
+    /* display: inline-block; */
+    border : 1px solid black;
+    padding : 10px;
+    background-color :rgb(245, 157, 43);
+    width: 420px;
+    margin-bottom: 30px;
+    
+}
+.heading{
+    font-weight : 600;
+
+}
+.b {
+    color:  gray;
+    font-size: 11px;
+    margin-bottom: 28px;
+}
+.he {
+    color:  gray;
+    font-size: 11px;
+    margin-top: 6px;
+    margin-bottom: 48px;
+}
+
+.hy{
+    color:  gray;
+    font-size: 11px;
+    margin-top : 0px;
+
+}
+
+.formula-interface{
+    display : grid;
+    grid-template-columns: 100px 200px  120px;
+}
+
+
+.inputs{
+    margin-top : 7px;
+}
+#height {
+    border : 1px solid  rgb(217, 216, 216);
+    padding :5px;
+    background-color: rgb(218, 217, 217);
+    font-size : 9px;
+    width: 174px;
+   
+}
+
+#base{
+    margin-bottom: 17px;
+    padding : 5px;
+    border : 1px solid rgb(217, 216, 216);
+    background-color: rgb(218, 217, 217);
+    font-size: 9px;
+    width: 174px;
+}
+#calculate {
+    border : none;
+    padding: 3px;
+    background-color: rgb(10, 106, 250);
+    color: white;
+    font-size: 10px;
+    
+}
+
+ 
+.right-angle{
+   margin-top : 3px;
+    width : 120px;
+    height: 98%;
+
+}
+
+#output {
+    margin-top: 15px;
+    border: 1px solid  rgb(217, 216, 216);
+    font-size : 13px;
+    padding :10px;
+    background-color: rgb(218, 217, 217);
+    height : 10px;
+    width: 163px;
+}
+
+#myButton{
+    margin-left: 120px;
+}
+
+#circle-radius{
+    margin-bottom: 8px;
+    padding : 5px;
+    border : 1px solid rgb(217, 216, 216);
+    background-color: rgb(218, 217, 217);
+    font-size: 9px;
+    width: 174px;
+}
+.radius {
+    color:  gray;
+    font-size: 11px;
+    margin-bottom: 58px;
+
+}
+.area {
+    color:  gray;
+    font-size: 11px;
+    margin-top : 0px;
+}
+#find{
+    border : none;
+    padding: 3px;
+    background-color: rgb(10, 106, 250);
+    color: white;
+    font-size: 10px;
+
+}
+
+
+.circle-image{
+    margin-top : 3px;
+    width : 120px;
+    height: 90%;
+ }
+
+ #Area{
+    margin-top: 15px;
+    border: 1px solid  rgb(217, 216, 216);
+    font-size : 13px;
+    padding :10px;
+    background-color: rgb(218, 217, 217);
+    height : 10px;
+    width: 163px;
+ }
+
+
+#comment-button{
+    padding : 10px;
+    font-size : 13px;
+    border-radius : 3px;
+    background-color:  rgb(41, 196, 41);
+    border: none;
+}
