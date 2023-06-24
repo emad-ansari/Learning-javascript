@@ -173,15 +173,15 @@ userName = document.getElementById("input-text").value;
 // console.log(hypotaneus);
 
 
-let b; 
-let a;
+let base; 
+let heig;
 var hypo;
 document.getElementById("calculate").onclick = function () {
-    b = document.getElementById("base").value;
-    a = document.getElementById("height").value;
-    b = Number(b);
-    a = Number(a);
-    hypo = Math.sqrt((Math.pow(b,2) + (Math.pow(a, 2))));
+    base = document.getElementById("base").value;
+    heig = document.getElementById("height").value;
+    base = Number(base);
+    heig = Number(heig);
+    hypo = Math.sqrt((Math.pow(base,2) + (Math.pow(heig, 2))));
     document.getElementById("output").innerHTML = hypo;
 
 
@@ -433,4 +433,59 @@ for (let price of prices){  // for every element (price) in my prices array
 
 
 
-// 
+// 2D array = An array of array
+let vegetables = ["carrots", "onion", "potatoes"];
+let meats = ["eggs", "chicken", "fish"];
+
+let groceryList = [fruits, vegetables, meats];
+
+for (let list of groceryList){
+    for(let items of list){
+        console.log(items);
+    }
+}
+
+
+/*
+    Spread operator(...) = allows an iterable such as an 
+    //                array or string to be expanded 
+    //                in places where zero or more arguments 
+    //                are expected 
+
+*/
+
+let numbers = [1,2,3,4,5,6,7,8,9];
+// console.log(numbers); // this will not spread 
+// console.log(...numbers);  // this will spread
+
+// another use case of spread operator
+let maximum = Math.max(numbers);  // this will give Nan
+maximum = Math.max(...numbers);  // this will work and print 9
+console.log(maximum);
+
+// another use case
+let class1 = ["Emad", "Shahma", "Hamid Raza"];
+let class2 = ["Arsalan", "Rehan", "Farhan"];
+class1.push(...class2);
+console.log(...class1);
+
+/*
+    rest parameter = represents an indefinite number of parameters
+    
+
+*/
+let a = 1; 
+let b = 2;
+let c = 3;
+let d = 4;
+let e = 5;
+
+console.log(sum(a,b,c,d,e));
+
+function sum(...numbers){
+    let total = 0;
+    for (let number of numbers){
+        total += number;
+    }
+    return total;
+}
