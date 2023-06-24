@@ -249,4 +249,188 @@ console.log(first_Name);
 console.log(last_Name);
 
 
+/*
+    method chaining = calling one method after 
+    //                another in one continuous line of code
+*/
 
+let my_name = "Emad";
+let letter = my_name.charAt(0).toLowerCase();
+console.log(letter); 
+
+
+/*
+    function => define code once and use it many times.
+    to perform some code, call the function name.
+
+*/
+
+let _name = "Emad";
+let _age = 21;
+happyBirthday(_name , _age);
+function happyBirthday(_name, _age){
+    console.log("happy birthday" , _name , "you are", _age, "years old");
+}
+
+/*
+    return => return a value back to the place where you invoked a fucntion
+
+*/
+
+let Area;
+let width = window.prompt("Enter the width : ");
+let height = window.prompt("Enter the height : ");
+Area = AreaOfRectangle(width, height);
+console.log("Area of rectangle is : " , Area);
+function AreaOfRectangle(width, height){
+    return width * height;
+}
+
+
+/*
+    ternary operator => shortcut for an if/else statements
+    
+    it takes three operands
+    1. a condtion with ?
+    2. expression if true
+    3. expression if false
+
+    condition ? exprIfTrue : exprIfFalse
+*/
+
+let adult = checkAge(21);
+console.log(adult);
+
+function checkAge(age){
+    return (age >= 18)? true : false;
+}
+
+
+/*
+    let => variables are limited to block scope {}
+    var => variable are limited to functions scope(){}
+
+
+*/
+
+for (let i = 0; i <=3; i++){
+    console.log(" i is accessible inside block scope")
+}
+// console.log(i) -> this will give error
+
+for (var j = 0; j<= 2; j ++){
+    console.log("I am var variable and is accessible inside block scope");
+}
+console.log("I am var variable and is accessible outside block scope");
+
+// Another example that illustrate the difference between var and let
+
+// Declare a global variable with var
+var globalVar = "Global var";
+
+// Declare a global variable with let
+let globalLet = "Global let";
+
+{
+  var localVar = "Local var";
+  let localLet = "Local let";
+
+  console.log(localVar); // Output: "Local var"
+  console.log(localLet); // Output: "Local let"
+
+}
+
+  console.log(globalVar); // Output: "Global var"
+  console.log(globalLet); // Output: "Global let"
+
+  console.log(localVar); // Output: "Local var"
+//   console.log(localLet); // Output: Uncaught ReferenceError: localLet is not defined
+
+
+
+// Template literals => delimited with(`)
+//                      instead of double or single quotes
+//                      allows embedded variables and expression
+
+let _UserName = "Emad";
+let items = 4;
+let total = 100;
+
+// console.log("Hello", _UserName);
+// console.log("you have", items, "items in your cart");
+// console.log("your total cost is $", total);
+
+// we can do the samething in different way
+console.log(`Hello ${_UserName}`);
+console.log(`you have ${items} items in your cart`);
+console.log(`your total cost is  $${total}`);
+
+
+let text = `Hello ${_UserName} you have ${items} items in your cart
+your total cost is  $${total}`;
+document.getElementById("myLabel").innerHTML = text;
+
+
+/*
+    toLocaleString() => it returns a string with a language
+    //                  sensitive representation of this number
+
+    number.toLocaleString(locale , {options});
+    'locale' = specif that language (undefined = default set in browser)
+    'option' = object with formatting options1
+    
+*/
+
+let myNum = 100;
+// myNum = myNum.toLocaleString("en-US") // US english
+
+// myNum = myNum.toLocaleString("hi-IN"); // Hindi
+
+// myNum = myNum.toLocaleString("de-DE"); // standard German
+
+
+// myNum = myNum.toLocaleString("en-US", {style: "currency", currency: "USD"});
+// myNum = myNum.toLocaleString("hi-IN", {style: "currency", currency: "INR"});
+// myNum = myNum.toLocaleString("de-DE", {style: "currency", currency: "EUR"});
+
+
+myNum = myNum.toLocaleString(undefined, {style: "unit" , unit: "celsius"});
+
+
+console.log(myNum);
+
+
+/*
+    array => array are dat astructure that can store multiple values of same type  
+
+
+*/
+
+let fruits = ["mango", "banana", "orange"];
+/*  
+   1.fruits.push("lemon");      -> add an element
+   2.fruits.pop();              -> removes last element
+   3.fruits.unshift("apple");   -> add element to begining
+   4.fruits.shift();            -> removes element from begining
+   5.fruits.sort()              -> sort the array element
+   6.reverse()                  -> it reverse the array
+*/
+// let length = fruits.length;
+// let index = fruits.indexOf("banana");
+console.log(fruits);
+
+// printing the ellement of array using two types of for loop
+
+let prices = [2,4,19,20,5];
+for (let i = 0; i < prices.length; i++){
+    console.log(prices[i]);
+}
+
+// another for loop
+for (let price of prices){  // for every element (price) in my prices array 
+    console.log(price);     // print that price
+}
+
+
+
+// 
