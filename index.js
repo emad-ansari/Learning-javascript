@@ -84,8 +84,8 @@ let student = true; // booleans value
 
 // second way:
 let userName;
-document.getElementById("myButton").onclick = function(){
-userName = document.getElementById("input-text").value;
+document.getElementById("myButton").onclick = function () {
+    userName = document.getElementById("input-text").value;
     console.log(userName);
 }
 
@@ -148,6 +148,7 @@ userName = document.getElementById("input-text").value;
     6. Math.abs()   -> it gives us absolute value of a number (i.e. -4 = 4, -54.8 = 54.8 etc...)
     7. Math.Max()   -> it find the maximum value between number 
     8. Math.min()   -> it find the minimum value betweeen number
+    9. Math.random()-> it creates random number
 
 */
 
@@ -173,7 +174,7 @@ userName = document.getElementById("input-text").value;
 // console.log(hypotaneus);
 
 
-let base; 
+let base;
 let heig;
 var hypo;
 document.getElementById("calculate").onclick = function () {
@@ -181,7 +182,7 @@ document.getElementById("calculate").onclick = function () {
     heig = document.getElementById("height").value;
     base = Number(base);
     heig = Number(heig);
-    hypo = Math.sqrt((Math.pow(base,2) + (Math.pow(heig, 2))));
+    hypo = Math.sqrt((Math.pow(base, 2) + (Math.pow(heig, 2))));
     document.getElementById("output").innerHTML = hypo;
 
 
@@ -189,32 +190,32 @@ document.getElementById("calculate").onclick = function () {
 const PI = 3.142;
 let radius;
 let area;
-document.getElementById("find").onclick = function(){
+document.getElementById("find").onclick = function () {
     radius = document.getElementById("circle-radius").value;
     radius = Number(radius);
-    console.log(radius , typeof radius);
-    area = PI * Math.pow(radius ,2);
+    console.log(radius, typeof radius);
+    area = PI * Math.pow(radius, 2);
     console.log(area);
     document.getElementById("Area").innerHTML = area;
 }
 
 
- /*
-    creating random number using Math.random function
+/*
+   creating random number using Math.random function
 
- */ 
-let v = Math.floor(Math.random() *6) + 1;
-console.log("below function generate random number");
+*/
+let v = Math.floor(Math.random() * 6) + 1;
+console.log("above function generate random number");
 console.log(v);
 
 /*
     Some useful string function $ methods
-    1.length -> this will give the length o fa string
-    2.charAt() -> this function will give a character a  particular index
-    3.indexOf() -> this function will give a  index value of  a particular character in a string
+    1.length -> this will give the length of a string.
+    2.charAt() -> this function will give a character at a particular index.
+    3.indexOf() -> this function will give a  index value of  a particular character in a string.
     4.lastIndexOf() -> this functiion will give the last index of a character in a string (eg. "bro code"  -> in this example first 'o' is at index number 2 and second is at index number 5)
-    5. trim() ->  trim the extra space
-    6.replaceAll() -> this function will replace a particular character with another character
+    5.trim() ->  trim the extra space.
+    6.replaceAll() -> this function will replace a particular character with another character.
 
 */
 let Name = "Emad Ansari";
@@ -224,16 +225,17 @@ console.log(Name.indexOf('A'));
 console.log(Name.lastIndexOf('a'));
 console.log(Name.toLowerCase());
 console.log(Name.toUpperCase());
+console.log("this is substring method : ", Name.substring(1));
 
 let phoneNumber = "123-456-789";
-console.log("before replacing the character : " , phoneNumber);
-console.log("after replacing the character : " );
+console.log("before replacing the character : ", phoneNumber);
+console.log("after replacing the character : ");
 console.log(phoneNumber.replaceAll("-", "*"));
 
 /*
     slice(inclusive_index , exculsive_index) method -> it extract a section of a string and 
     //                returns it as a new string,
-    //                without modifying the orginal stirng
+    //                without modifying the orginal string.
 
 */
 let fullName = "Emad Ansari";
@@ -251,12 +253,12 @@ console.log(last_Name);
 
 /*
     method chaining = calling one method after 
-    //                another in one continuous line of code
+    //                another in one continuous line of code.
 */
 
 let my_name = "Emad";
 let letter = my_name.charAt(0).toLowerCase();
-console.log(letter); 
+console.log(letter);
 
 
 /*
@@ -267,9 +269,9 @@ console.log(letter);
 
 let _name = "Emad";
 let _age = 21;
-happyBirthday(_name , _age);
-function happyBirthday(_name, _age){
-    console.log("happy birthday" , _name , "you are", _age, "years old");
+happyBirthday(_name, _age);
+function happyBirthday(_name, _age) {
+    console.log("happy birthday", _name, "you are", _age, "years old");
 }
 
 /*
@@ -281,11 +283,66 @@ let Area;
 let width = window.prompt("Enter the width : ");
 let height = window.prompt("Enter the height : ");
 Area = AreaOfRectangle(width, height);
-console.log("Area of rectangle is : " , Area);
-function AreaOfRectangle(width, height){
+console.log("Area of rectangle is : ", Area);
+function AreaOfRectangle(width, height) {
     return width * height;
 }
 
+
+/*
+    Arrow function : Arrow functions are introduced in ES6, which provides you a more accurate way to write the functions in JavaScript. They allow us to write smaller function syntax. Arrow functions make your code more readable and structured.
+    Points :-
+    1. Arrow functions are anonymous function(the function without name and not bound with identifier)
+    2. They do not return any value and can declare without the function keyword.
+    3. Arrow function can not be used as the constructor.
+    4. They are also called as Lambda functions in different languages.
+
+    Syntax : 
+    const functionName = (arg1, arg2, ?..) => {  
+    //body of the function  
+    }  
+
+
+
+*/
+
+// In the following example, we are defining three functions that show Function Expression, Anonymous Function, and Arrow Function.
+
+// functin expression 
+var myfun1 = function show(){
+    console.log("It is a function expression");
+}
+
+// Anonymous function
+
+var myfun2 = function(){
+    console.log("It is an anonymous function");
+}
+
+// Arrow function 
+var myfun3 = () => {
+    console.log("It is an Arrow function");
+}
+
+myfun1();
+myfun2();
+myfun3();
+
+
+// Arrow function with parameters
+
+var show1 = (a,b ,c) => {
+    console.log(a + " " + b + " " + c);
+}
+
+show1 (100, 200 , 300);
+
+// Arrow function with default parameters
+var show2 = (a, b = 200) => {
+    console.log("I am default arrow function" + a + " " + b);
+}
+
+show2(500);
 
 /*
     ternary operator => shortcut for an if/else statements
@@ -295,14 +352,14 @@ function AreaOfRectangle(width, height){
     2. expression if true
     3. expression if false
 
-    condition ? exprIfTrue : exprIfFalse
+    Syntax : (condition) ? exprIfTrue : exprIfFalse
 */
 
 let adult = checkAge(21);
 console.log(adult);
 
-function checkAge(age){
-    return (age >= 18)? true : false;
+function checkAge(age) {
+    return (age >= 18) ? true : false;
 }
 
 
@@ -313,12 +370,12 @@ function checkAge(age){
 
 */
 
-for (let i = 0; i <=3; i++){
+for (let i = 0; i <= 3; i++) {
     console.log(" i is accessible inside block scope")
 }
 // console.log(i) -> this will give error
 
-for (var j = 0; j<= 2; j ++){
+for (var j = 0; j <= 2; j++) {
     console.log("I am var variable and is accessible inside block scope");
 }
 console.log("I am var variable and is accessible outside block scope");
@@ -332,25 +389,25 @@ var globalVar = "Global var";
 let globalLet = "Global let";
 
 {
-  var localVar = "Local var";
-  let localLet = "Local let";
+    var localVar = "Local var";
+    let localLet = "Local let";
 
-  console.log(localVar); // Output: "Local var"
-  console.log(localLet); // Output: "Local let"
+    console.log(localVar); // Output: "Local var"
+    console.log(localLet); // Output: "Local let"
 
 }
 
-  console.log(globalVar); // Output: "Global var"
-  console.log(globalLet); // Output: "Global let"
+console.log(globalVar); // Output: "Global var"
+console.log(globalLet); // Output: "Global let"
 
-  console.log(localVar); // Output: "Local var"
+console.log(localVar); // Output: "Local var"
 //   console.log(localLet); // Output: Uncaught ReferenceError: localLet is not defined
 
 
 
 // Template literals => delimited with(`)
 //                      instead of double or single quotes
-//                      allows embedded variables and expression
+//                      allows embedded variables and expression.
 
 let _UserName = "Emad";
 let items = 4;
@@ -373,10 +430,10 @@ document.getElementById("myLabel").innerHTML = text;
 
 /*
     toLocaleString() => it returns a string with a language
-    //                  sensitive representation of this number
+    //                  sensitive representation of number
 
     number.toLocaleString(locale , {options});
-    'locale' = specif that language (undefined = default set in browser)
+    'locale' = specify that language (undefined = default set in browser)
     'option' = object with formatting options1
     
 */
@@ -394,14 +451,14 @@ let myNum = 100;
 // myNum = myNum.toLocaleString("de-DE", {style: "currency", currency: "EUR"});
 
 
-myNum = myNum.toLocaleString(undefined, {style: "unit" , unit: "celsius"});
+myNum = myNum.toLocaleString(undefined, { style: "unit", unit: "celsius" });
 
 
 console.log(myNum);
 
 
 /*
-    array => array are dat astructure that can store multiple values of same type  
+    array => array are data structure that can store multiple values of same type. 
 
 
 */
@@ -421,13 +478,13 @@ console.log(fruits);
 
 // printing the ellement of array using two types of for loop
 
-let prices = [2,4,19,20,5];
-for (let i = 0; i < prices.length; i++){
+let prices = [2, 4, 19, 20, 5];
+for (let i = 0; i < prices.length; i++) {
     console.log(prices[i]);
 }
 
 // another for loop
-for (let price of prices){  // for every element (price) in my prices array 
+for (let price of prices) {  // for every element (price) in my prices array 
     console.log(price);     // print that price
 }
 
@@ -439,8 +496,8 @@ let meats = ["eggs", "chicken", "fish"];
 
 let groceryList = [fruits, vegetables, meats];
 
-for (let list of groceryList){
-    for(let items of list){
+for (let list of groceryList) {
+    for (let items of list) {
         console.log(items);
     }
 }
@@ -454,7 +511,7 @@ for (let list of groceryList){
 
 */
 
-let numbers = [1,2,3,4,5,6,7,8,9];
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // console.log(numbers); // this will not spread 
 // console.log(...numbers);  // this will spread
 
@@ -474,18 +531,128 @@ console.log(...class1);
     
 
 */
-let a = 1; 
+let a = 1;
 let b = 2;
 let c = 3;
 let d = 4;
 let e = 5;
 
-console.log(sum(a,b,c,d,e));
+console.log(sum(a, b, c, d, e));
 
-function sum(...numbers){
+function sum(...numbers) {
     let total = 0;
-    for (let number of numbers){
+    for (let number of numbers) {
         total += number;
     }
     return total;
+}
+
+
+/*
+    forEach() method -> It itereates through each element of an array once, 
+    A function that accepts up to three arguments. forEach calls the callbackfn
+    function one time for each element in the array.
+    Performs the specified action for each element in an array.
+
+*/
+let bestColors = ['red', 'green', 'blue', 'Yellow'];
+// using forEach() method we can print all element of array
+bestColors.forEach((x, i)=> console.log(x));
+
+// printing fibonacci series with the help of forEach() method
+
+let Sum = 0;
+var arr = [10, 18, 12, 20];
+
+arr.forEach( (fetchElement)=>{
+    Sum = Sum + fetchElement;
+    console.log(Sum);
+});
+
+
+// create an array of numbers. loop through the array and add three to each number
+// and replace the old number.
+let number = [1,2,3,4,5];
+
+number.forEach((num, index) =>{
+    // num = num + 3;
+    // number[index] = num;
+
+    // above two line of code can be witten in one line as following
+    number[index] = num + 3;
+    
+});
+console.log("Print all the number after modifying : ");
+for (let items of number){
+    console.log(items);
+}
+
+let Total = 0;
+// find the average of all the number from question three
+number.forEach(function (element){
+    Total += element;
+});
+let Average = Total / number.length;
+console.log(Average);
+
+// create a function that takes in array of numbers. Multiply each number together
+// and alert the product
+
+let nums = [10, 20, 30];
+multiPlyArrayelement(nums);
+function multiPlyArrayelement(arr){
+    let product = 1;
+    arr.forEach((items)=> {
+        product *= items;
+    });
+    alert("Product of all element of array is : " + product);
+
+}
+
+// create a function that takes in an array of numbers. Return a new array containing 
+// every even number from the original array (do not use map or filter)
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let newArray = evenNumberArray(array);
+console.log(...newArray);
+function evenNumberArray(arr){
+    let list = [];
+    arr.forEach((num) =>{
+        if(num % 2 === 0){
+            list.push(num);
+        }
+    });
+    return list;
+}
+
+
+ 
+
+
+
+
+
+
+/*
+    callback => a function passed as an argument to another function
+
+    It ensures that a function is not going to run
+    before a task is completed.
+    It helps us to develop asynchronus code.
+    (when one function has to wait for another function)
+    that helps us avoid errors and potential problems
+    eg. wait for a file to load
+*/
+
+sum(2, 3, displayDom);
+
+function sum(x, y, callBack) {
+    let result = x + y;
+    if (typeof callBack === 'function') {
+        callBack(result);
+    }
+
+}
+
+function displayDom(output) {
+    console.log(output);
 }
