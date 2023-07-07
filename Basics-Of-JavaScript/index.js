@@ -309,13 +309,13 @@ function AreaOfRectangle(width, height) {
 // In the following example, we are defining three functions that show Function Expression, Anonymous Function, and Arrow Function.
 
 // functin expression 
-var myfun1 = function show(){
+var myfun1 = function show() {
     console.log("It is a function expression");
 }
 
 // Anonymous function
 
-var myfun2 = function(){
+var myfun2 = function () {
     console.log("It is an anonymous function");
 }
 
@@ -331,11 +331,11 @@ myfun3();
 
 // Arrow function with parameters
 
-var show1 = (a,b ,c) => {
+var show1 = (a, b, c) => {
     console.log(a + " " + b + " " + c);
 }
 
-show1 (100, 200 , 300);
+show1(100, 200, 300);
 
 // Arrow function with default parameters
 var show2 = (a, b = 200) => {
@@ -557,14 +557,14 @@ function sum(...numbers) {
 */
 let bestColors = ['red', 'green', 'blue', 'Yellow'];
 // using forEach() method we can print all element of array
-bestColors.forEach((x, i)=> console.log(x));
+bestColors.forEach((x, i) => console.log(x));
 
 // printing fibonacci series with the help of forEach() method
 
 let Sum = 0;
 var arr = [10, 18, 12, 20];
 
-arr.forEach( (fetchElement)=>{
+arr.forEach((fetchElement) => {
     Sum = Sum + fetchElement;
     console.log(Sum);
 });
@@ -572,24 +572,24 @@ arr.forEach( (fetchElement)=>{
 
 // create an array of numbers. loop through the array and add three to each number
 // and replace the old number.
-let number = [1,2,3,4,5];
+let number = [1, 2, 3, 4, 5];
 
-number.forEach((num, index) =>{
+number.forEach((num, index) => {
     // num = num + 3;
     // number[index] = num;
 
     // above two line of code can be witten in one line as following
     number[index] = num + 3;
-    
+
 });
 console.log("Print all the number after modifying : ");
-for (let items of number){
+for (let items of number) {
     console.log(items);
 }
 
 let Total = 0;
 // find the average of all the number from question three
-number.forEach(function (element){
+number.forEach(function (element) {
     Total += element;
 });
 let Average = Total / number.length;
@@ -600,9 +600,9 @@ console.log(Average);
 
 let nums = [10, 20, 30];
 multiPlyArrayelement(nums);
-function multiPlyArrayelement(arr){
+function multiPlyArrayelement(arr) {
     let product = 1;
-    arr.forEach((items)=> {
+    arr.forEach((items) => {
         product *= items;
     });
     alert("Product of all element of array is : " + product);
@@ -614,18 +614,105 @@ function multiPlyArrayelement(arr){
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let newArray = evenNumberArray(array);
 console.log(...newArray);
-function evenNumberArray(arr){
+function evenNumberArray(arr) {
     let list = [];
-    arr.forEach((num) =>{
-        if(num % 2 === 0){
+    arr.forEach((num) => {
+        if (num % 2 === 0) {
             list.push(num);
         }
     });
     return list;
 }
 
+/*
+// map() method : In JavaScript, the map() function is a higher-order function that is used to transform elements in an array. 
+//               It creates a new array by applying a provided function to each element of the original array. The map() function
+//               does not modify the original array; instead, it returns a new array with the transformed elements.
+   Where can we use map function??
+   Remember, the map() function is suitable for scenarios where you want to transform each element of an array while
+   maintaining the original array's length. If you need to perform more complex operations that involve aggregating values or
+   conditionally modifying elements, other array methods like reduce() or forEach() might be more appropriate.
+*/
 
- 
+const citiesNames = ['NY', 'La', 'TX'];
+const _Lowercase = citiesNames.map((element) => {
+    return element.toLowerCase();
+});
+console.log(..._Lowercase);
+
+// another use caes of map function
+const numArray = [15, 1, 3, 2, 6];
+
+// do double -[10, 2, 6, 4, 12]
+const Double = numArray.map(double);
+function double(x) {
+    return x * 2;
+}
+console.log("This is double value of given array : " + Double);
+
+
+// do triple -[15, 3, 9, 6, 18]
+
+const Triple = numArray.map(triple);
+function triple(y) {
+    return y * 3;
+}
+console.log("This is triple vlaue of given array : " + Triple);
+
+// do Binary -['101', '1', '11', '10', '110']
+
+const Binary = numArray.map((binary) => {
+    return binary.toString(16);  // it  Returns a string representation of an object.
+    //                            // this can also be used for converting one number system to another number system. just pass the base in which you want to convert
+});
+console.log("This is bonary value of given array : " + Binary);
+
+
+
+// filter() function : It will not return the actual ouput but It will return the filtered element from a given array according to written filter logic.
+
+// filter the odd number from given array (numArray).
+const output_odd = numArray.filter(isOdd);
+function isOdd(x) {
+    return x % 2;
+}
+console.log("All odd number : " + output_odd);
+
+
+// filter all even number from given array.
+const output_even = numArray.filter(isEven);
+
+function isEven(x) {
+    return x % 2 === 0;
+}
+console.log("All even number : " + output_even);
+
+// reduce(function, accumulator) method : Note that as it's name suggest reduce but it does not reduce any thing
+//                   It takes two parameter()
+
+// analyse the following example
+
+// find the sum 
+
+const output_sum = numArray.reduce(findSum, 0);
+
+function findSum(accumulator, current_value) {
+    accumulator += current_value;
+    return accumulator;
+}
+console.log("Sum of all element of an array : " + output_sum);
+
+
+// find the max element
+const output_max = numArray.reduce((maxElement, current_value) => {
+    if (current_value > maxElement) {
+        maxElement = current_value;
+    }
+    return maxElement;
+}, 0);
+console.log("Maximum element from given array : " + output_max);
+
+
 
 
 
