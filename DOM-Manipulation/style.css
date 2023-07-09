@@ -1,0 +1,53 @@
+#Body{
+    background-image: url("backgroundImage.jpg");
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 11;
+    row-gap : 2px;
+    border : 2px solid white;
+    margin-left:30%;  
+    margin-right:30%;
+    margin-top: 20px;
+    padding : 15px;
+    margin-bottom:10px;
+}
+.list-items{
+    background-color: white;
+    color : black;
+    padding: 5px;
+    font-size: 25px;
+}
+#main-heading{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular',  Verdana, sans-serif;
+    font-size: 30px;
+    margin-bottom: 5px;
+   
+}
+#add-member{
+    font-size: 20px;
+    border : none;
+    padding : 10px;
+    background-color: white;
+    margin-right:5px;
+
+}
+#add-member:hover{
+    background-color: rgb(181, 181, 181);
+}
+.Add-member{
+    display: flex;
+    margin-left : 30%;
+    
+}
+#input-name{
+    border : none;
+    padding: 12.7px;
+    font-size:15px;
+    /* width : 270px */
+    
+}

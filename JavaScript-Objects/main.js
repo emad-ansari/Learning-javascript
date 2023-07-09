@@ -44,7 +44,7 @@ const check = (str, target) =>{
     // return false;
     // using teranry operator
     return (str.search(target) != -1)? true : false;  
-    // NOTE : Search() method -> If ans find it return the index value of first chracter of target string
+    // NOTE : Search() method -> If ans find it return the index value of first chracter of target string.
     //                           If ans not find, it returns (-1)
 }
 let target = 'apple';
@@ -67,4 +67,31 @@ function Mouse(color, brand, button, scroll){
     }
 }
 let dell_mouse = new Mouse('white', 'apple', 'right and left button');
-dell_mouse.brand
+
+
+
+// two different ways to create an object
+// 1. Factory function
+
+function createCircle(radius){
+    return {
+        radius: radius,
+        draw : function(){
+            console.log(`draw a circle of radius ${radius}`);
+
+        }
+    };
+}
+const circle = createCircle(2);
+circle.draw();
+
+// 2. Constructor function
+
+function Circle (radius){
+    this.radius = radius;
+    this .draw = function(){
+        console.log(`draw a circle of radius ${radius}`);
+    }
+}
+const another = new Circle(5);
+another.draw();
