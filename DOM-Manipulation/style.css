@@ -51,3 +51,7 @@
     /* width : 270px */
     
 }
+#list-element ,a{
+    color : white;
+    font-size : 30px;
+}

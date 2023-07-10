@@ -19,7 +19,7 @@
 // 1. getElementById()
 
 const element = document.getElementById("main-heading");
-console.log(element);
+// console.log(element);
 element.style.backgroundColor = 'green'
 function reverseOrder(){
     let ans = "";
@@ -76,3 +76,68 @@ Button.onclick = ()=>{
     // Modifying Attributes and classes
     newDiv.setAttribute('class', 'list-items')
 }
+
+
+
+// Root node
+// const rootNode = document.documentElement;
+// console.log("this is a root node : ",rootNode);
+
+// console.log(document.body);
+// console.log(document.head);
+
+
+// childrens
+// console.log(document.body.childNodes); // this will return a node object that will contain all nodes
+// console.log(document.body.children) // this will return the HTMLcollection , note that it's look like array but it's not an array
+// to convert onto array we can use Array.from() method 
+// const childrenOfBody = Array.from(document.body.children); 
+
+
+// firstChild and lastChild
+// console.log(document.body.firstChild);
+// console.log(document.body.lastChild);
+
+// console.log(document.body.firstElementChild);
+// console.log(document.body.lastElementChild);
+
+// Siblings
+const divTag = document.body.children[0];
+const firstDiv = divTag.children[0];
+const secondDiv = divTag.children[1];
+console.log(firstDiv.innerText) // this will print My Family Member
+console.log(secondDiv.innerText)  // this will print Emad
+console.log(secondDiv.nextElementSibling.innerText) // like this we can access previousSibling .
+
+
+
+// document.getElementsByClassName("links")[0].style.color = 'green'
+
+
+// change all external links color to green
+function changeColor(){
+    const internal_link = document.body.children[3].firstElementChild.innerText;
+    
+    
+    const ul = document.getElementsByClassName("links");
+   
+    for (link of ul){
+        // I have to search for the link which is external and change the color to green
+        // so let's serach first for the external link
+        const external_link = link.innerText.search("http");
+        
+        if(external_link != -1 && (link.innerText != internal_link)){
+            // then I have to change the color to green
+            // console.log(link)
+            link.style.backgroundColor = 'green';
+          
+        }
+        else {
+            continue;
+        }
+        
+    }
+    
+
+}
+// changeColor()
