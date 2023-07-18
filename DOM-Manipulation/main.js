@@ -62,6 +62,7 @@ function reverseOrder(){
 let Button = document.getElementById("add-member");
 Button.onclick = ()=>{
     let new_member_name = document.getElementById("input-name").value;
+    document.getElementById("input-name").value = "";
     let container = document.getElementById("container");
     // creating a new div element inside container
     let newDiv = document.createElement('div');
@@ -141,3 +142,4 @@ function changeColor(){
 
 }
 // changeColor()
+
