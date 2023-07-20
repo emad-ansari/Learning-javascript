@@ -21,15 +21,15 @@
 const element = document.getElementById("main-heading");
 // console.log(element);
 element.style.backgroundColor = 'green'
-function reverseOrder(){
+function reverseOrder() {
     let ans = "";
     let string = document.getElementById("main-heading").innerText;
     // console.log(string);
-    for (let i = string.length - 1; i >= 0 ; i--){
+    for (let i = string.length - 1; i >= 0; i--) {
         ans += string[i];
     }
     document.getElementById("main-heading").innerText = ans;
-  
+
 
 }
 // reverseOrder();
@@ -58,25 +58,9 @@ function reverseOrder(){
 // console.log("this is a container : " , container);
 
 
-// Creating Elements
-let Button = document.getElementById("add-member");
-Button.onclick = ()=>{
-    let new_member_name = document.getElementById("input-name").value;
-    document.getElementById("input-name").value = "";
-    let container = document.getElementById("container");
-    // creating a new div element inside container
-    let newDiv = document.createElement('div');
-
-    // Adding new elements to main container
-    container.append(newDiv);
-
-    // Modifying/set the value(Name) of new member
-    newDiv.innerText = new_member_name;
 
 
-    // Modifying Attributes and classes
-    newDiv.setAttribute('class', 'list-items')
-}
+
 
 
 
@@ -116,29 +100,29 @@ console.log(secondDiv.nextElementSibling.innerText) // like this we can access p
 
 
 // change all external links color to green
-function changeColor(){
+function changeColor() {
     const internal_link = document.body.children[3].firstElementChild.innerText;
-    
-    
+
+
     const ul = document.getElementsByClassName("links");
-   
-    for (link of ul){
+
+    for (link of ul) {
         // I have to search for the link which is external and change the color to green
         // so let's serach first for the external link
         const external_link = link.innerText.search("http");
-        
-        if(external_link != -1 && (link.innerText != internal_link)){
+
+        if (external_link != -1 && (link.innerText != internal_link)) {
             // then I have to change the color to green
             // console.log(link)
             link.style.backgroundColor = 'green';
-          
+
         }
         else {
             continue;
         }
-        
+
     }
-    
+
 
 }
 // changeColor()
