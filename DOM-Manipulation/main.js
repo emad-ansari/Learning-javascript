@@ -3,7 +3,7 @@
     1. What is DOM{
         a. Document Object Model
         b. Use it to manipulate content, style and structure
-        c. Is one of the most unique and useful tools of java script
+        c. It is one of the most unique and useful tools of java script
     }
     2. Methods to select Element in the DOM
     3. How to Traverse the DOM
@@ -75,7 +75,7 @@ function reverseOrder() {
 // childrens
 // console.log(document.body.childNodes); // this will return a node object that will contain all nodes
 // console.log(document.body.children) // this will return the HTMLcollection , note that it's look like array but it's not an array
-// to convert onto array we can use Array.from() method 
+// to convert it into an array we can use Array.from() method 
 // const childrenOfBody = Array.from(document.body.children); 
 
 
@@ -90,8 +90,8 @@ function reverseOrder() {
 const divTag = document.body.children[0];
 const firstDiv = divTag.children[0];
 const secondDiv = divTag.children[1];
-console.log(firstDiv.innerText) // this will print My Family Member
-console.log(secondDiv.innerText)  // this will print Emad
+console.log(firstDiv.innerText) // this will print "My Family Member"
+console.log(secondDiv.innerText)  // this will print "Emad"
 console.log(secondDiv.nextElementSibling.innerText) // like this we can access previousSibling .
 
 

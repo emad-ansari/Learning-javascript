@@ -35,7 +35,7 @@ stopWatch.sayBrand = function (){
 // Declare a variable assign it a string of multiple words, and check
 // to see if one of the words is 'apple' or not
 
-let str = "I like apple very much. It is a healthy food";
+let str = "I like apple very much. It is a healthy fruits";
 // console.log(str.search('apple'));
 const check = (str, target) =>{
     // if(str.search(target) != -1){
@@ -51,7 +51,7 @@ let target = 'apple';
 console.log(check(str, target));
 
 
-// Create a mouse object that has four properties and three methods
+// Create a mouse object that has four properties and three methods using constructor function
 
 function Mouse(color, brand, button, scroll){
     this.color = color;

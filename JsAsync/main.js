@@ -98,7 +98,7 @@ function getTime(){
 // Promises objects properties 
 /*
     A javaScript promises object have three state:
-    1. Penidng 
+    1. Pending
     2. fulfilled
     3. Rejected
 
