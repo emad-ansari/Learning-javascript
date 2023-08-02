@@ -112,11 +112,11 @@ document.getElementById("myButton").onclick = function () {
 // x = Number(myAge);
 // console.log(x, typeof x);
 
-// y = String("3.12"); 
+// y = String(3.12); 
 // console.log(y, typeof y); 
 
 
-// y = String("emad");
+// y = String(12);
 // console.log(y, typeof y);
 
 // z = Boolean("");
