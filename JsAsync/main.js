@@ -182,3 +182,6 @@ getWeather('sunny')
     .then(getIcon)
     .then(displayResult)
     .catch(onReject);
+
+
+

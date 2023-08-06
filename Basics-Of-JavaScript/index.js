@@ -290,7 +290,8 @@ function AreaOfRectangle(width, height) {
 
 
 /*
-    Arrow function : Arrow functions are introduced in ES6, which provides you a more accurate way to write the functions in JavaScript. They allow us to write smaller function syntax. Arrow functions make your code more readable and structured.
+    Arrow function : Arrow functions are introduced in ES6, which provides you a more accurate way to write the functions in JavaScript. 
+    They allow us to write smaller function syntax. Arrow functions make your code more readable and structured.
     Points :-
     1. Arrow functions are anonymous function(the function without name and not bound with identifier)
     2. They do not return any value and can declare without the function keyword.
@@ -366,8 +367,6 @@ function checkAge(age) {
 /*
     let => variables are limited to block scope {}
     var => variable are limited to functions scope(){}
-
-
 */
 
 for (let i = 0; i <= 3; i++) {
@@ -502,7 +501,6 @@ for (let list of groceryList) {
     }
 }
 
-
 /*
     Spread operator(...) = allows an iterable such as an 
     //                array or string to be expanded 
@@ -529,7 +527,6 @@ console.log(...class1);
 /*
     rest parameter = represents an indefinite number of parameters
     
-
 */
 let a = 1;
 let b = 2;
@@ -582,6 +579,7 @@ number.forEach((num, index) => {
     number[index] = num + 3;
 
 });
+
 console.log("Print all the number after modifying : ");
 for (let items of number) {
     console.log(items);
@@ -711,11 +709,6 @@ const output_max = numArray.reduce((maxElement, current_value) => {
     return maxElement;
 }, 0);
 console.log("Maximum element from given array : " + output_max);
-
-
-
-
-
 
 
 
