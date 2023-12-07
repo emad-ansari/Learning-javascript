@@ -1,4 +1,5 @@
 console.log("Hello world")
+console.log("this is a test commit in js async file of leaning java script project")
 
 
 // 1. Callbacks : A callback is a function passed as an argument to another function
