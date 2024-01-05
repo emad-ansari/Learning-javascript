@@ -1,6 +1,6 @@
 // consţ : A variable that can not be changed.
-
 // write a program to calculate area of circle 
+
 const PI = 3.142;
 let radius;
 let area;
@@ -31,5 +31,6 @@ document.getElementById("submit-button").onclick = function(){
     }
     else {
         console.log("You did not choose any option please select one option")
-    }
+    }    
 }
+
